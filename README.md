@@ -7,7 +7,7 @@ Table of contents
    * [Result](#Result)
    * [Requirement](#Requirement)
    * [Installation](#Build--Installation)
-   * [Open Data List](#open-data)
+   * [Open Data](#open-data)
    * [Run](#run)
 <!--te-->
 
