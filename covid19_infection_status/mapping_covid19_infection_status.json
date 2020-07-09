@@ -1,0 +1,62 @@
+{
+    "mappings": {
+      "_doc": {
+        "properties": {
+          "accDefRate": {
+            "type": "double"
+          },
+          "accExamCnt": {
+            "type": "integer"
+          },
+          "accExamCompCnt": {
+            "type": "integer"
+          },
+          "careCnt": {
+            "type": "integer"
+          },
+          "clearCnt": {
+            "type": "integer"
+          },
+          "createDt": {
+            "type": "date"
+          },
+          "deathCnt": {
+            "type": "integer"
+          },
+          "decideCnt": {
+            "type": "integer"
+          },
+          "examCnt": {
+            "type": "integer"
+          },
+          "resutlNegCnt": {
+            "type": "integer"
+          },
+          "seq": {
+            "type": "short"
+          },
+          "stateDt": {
+            "type": "text"
+          },
+          "stateTime": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "updateDt": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          }
+        }
+      }
+    }
+  }
