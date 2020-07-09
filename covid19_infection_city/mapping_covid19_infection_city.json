@@ -1,0 +1,53 @@
+{
+  "mappings": {
+    "_doc": {
+      "properties": {
+        "createDt": {
+          "type": "text"
+        },
+        "deathCnt": {
+          "type": "integer"
+        },
+        "defCnt": {
+          "type": "integer"
+        },
+        "gubun": {
+          "type": "text"
+        },
+        "gubunCn": {
+          "type": "text"
+        },
+        "gubunEn": {
+          "type": "text"
+        },
+        "incDec": {
+          "type": "integer"
+        },
+        "isolClearCnt": {
+          "type": "integer"
+        },
+        "isolIngCnt": {
+          "type": "integer"
+        },
+        "localOccCnt": {
+          "type": "integer"
+        },
+        "overFlowCnt": {
+          "type": "integer"
+        },
+        "qurRate": {
+          "type": "text"
+        },
+        "seq": {
+          "type": "integer"
+        },
+        "stdDay": {
+          "type": "date"
+        },
+        "updateDt": {
+          "type": "text"
+        }
+      }
+    }
+  }
+}
