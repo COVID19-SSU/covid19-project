@@ -5,7 +5,7 @@
 ## Meaning of an item
 
 |Item name|Item Description|Sample|
-|===|===|===|
+|:----:|:----:|:----:|
 |SEQ|게시글번호(국내 시도별 발생현황 고유값)|74|
 |STATE_DT|기준일|20200315|
 |STATE_TIME|기준시간|00:00|
