@@ -1,5 +1,5 @@
 # COVID-19 Project
-Store and Analyze data for COVID-19.
+Visualize and Analyze data for COVID-19.
 
 Table of contents
 =================
