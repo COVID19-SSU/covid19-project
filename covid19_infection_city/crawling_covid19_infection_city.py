@@ -5,6 +5,7 @@ import json
 import xmltodict
 from datetime import datetime
 from elasticsearch import Elasticsearch
+import os
 
 # 문자열 변경 함수 (str.replace의 반대버전)
 def rreplace(s, old, new, occurrence):
@@ -26,8 +27,10 @@ root_json = json.loads(jsontxt)
 #print(root_json)
 
 
+
 # 매핑 불러오기
-with open('mapping_covid19_infection_city.json', 'r') as f:
+
+with open("mapping_covid19_infection_city.json", 'r') as f:
         mapping = json.load(f)
 
 # 오늘까지의 doc을 dict형태로 변환 후 doc_list에 추가

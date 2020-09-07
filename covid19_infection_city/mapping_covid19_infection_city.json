@@ -1,6 +1,5 @@
 {
   "mappings": {
-    "_doc": {
       "properties": {
         "createDt": {
           "type": "text"
@@ -48,6 +47,5 @@
           "type": "text"
         }
       }
-    }
   }
 }
