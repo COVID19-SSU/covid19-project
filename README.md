@@ -7,8 +7,8 @@ Table of contents
    * [Result](#Result)
    * [Requirement](#Requirement)
    * [Installation](#Installation)
-   * [Open Data](#open-data)
    * [Run](#run)
+   * [Open Data](#open-data)
 <!--te-->
 
 Result
@@ -36,16 +36,6 @@ $ sudo docker-compose up
 ```sh
 $ pip3 install -r requirements.txt
 ```
-- Open http://localhost:5601  
-- Click `Management` tab  
-- Import [Kibana dashboard](https://github.com/COVID19-SSU/covid19-project/dashboard/export.ndjson)
-
-Open Data
-=======
-* 공공 데이터 포털 (https://data.go.kr/)
-  * 보건복지부_코로나19 감염_현황
-  * 보건복지부_코로나19 시·도발생_현황
-  * 보건복지부_코로나19 연령별·성별감염_현황
 
 Run
 =======
@@ -68,3 +58,17 @@ Run
     ```shell script
     $ echo -e "0 12 * * * python3 ~/covid19-project/covid19_infection_status/update_covid19_infection_status.py\n0 12 * * * python3 ~/covid19-project/covid19_infection_city/update_covid19_infection_city.py" | crontab
     ```
+
+* Dashboard
+  * Open http://localhost:5601  
+  * Click `Management` tab  
+  * Import [Kibana dashboard](https://github.com/COVID19-SSU/covid19-project/dashboard/export.ndjson)
+  * Create Index pattern
+  * Go to `Dashboard` tab
+
+Open Data
+=======
+* 공공 데이터 포털 (https://data.go.kr/)
+  * 보건복지부_코로나19 감염_현황
+  * 보건복지부_코로나19 시·도발생_현황
+  * 보건복지부_코로나19 연령별·성별감염_현황
