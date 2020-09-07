@@ -55,7 +55,7 @@ Run
         $ python3 covid19-project/covid19_infection_status/update_covid19_infection_status.py
     
 * add Task scheduler(cron)
-  * 매일 12:00(PM)에 오늘 데이터 업데이트가 실행되도록 해당 작업 crontab에 등록 (작업 환경에 맞추어 경로 수정 해줘야 함)
+  * 매일 12:00(PM)에 오늘 데이터 업데이트가 실행되도록 해당 작업 crontab에 등록 (작업 환경에 맞추어 절대 경로 수정 해줘야 함)
   
         $ echo -e "0 12 * * * python3 ~/covid19-project/covid19_infection_status/update_covid19_infection_status.py\n0 12 * * * python3 ~/covid19-project/covid19_infection_city/update_covid19_infection_city.py" | crontab
 
