@@ -31,9 +31,26 @@ Requirement
 
 Installation
 =======
-
+    $ git clone https://github.com/COVID19-SSU/covid19-project.git
 Open Data
 =======
+* 공공 데이터 포털 (https://data.go.kr/)
+  * 보건복지부_코로나19 감염_현황
+  * 보건복지부_코로나19 시·도발생_현황
+  * 보건복지부_코로나19 연령별·성별감염_현황
 
 Run
 =======
+* crawling
+  * 보건복지부 코로나19 데이터(3월1일~오늘)를 크롤링하여 elasticsearch에 추가
+  
+
+         $ python covid19-project/covid19_infection_city/crawling_covid19_infection_city.py
+         $ python covid19-project/covid19_infection_status/crawling_covid19_infection_status.py
+    
+* update
+  * 기존 데이터에 보건복지부 코로나19 데이터(오늘)를 elasticsearch에 업데이트
+  
+        $ python covid19-project/covid19_infection_city/update_covid19_infection_city.py
+        $ python covid19-project/covid19_infection_status/update_covid19_infection_status.py
+    
