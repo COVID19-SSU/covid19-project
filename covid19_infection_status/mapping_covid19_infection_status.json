@@ -1,6 +1,5 @@
 {
     "mappings": {
-      "_doc": {
         "properties": {
           "accDefRate": {
             "type": "double"
@@ -57,6 +56,5 @@
             }
           }
         }
-      }
     }
   }
