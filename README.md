@@ -30,14 +30,15 @@ Installation
 ```sh
 $ git clone https://github.com/COVID19-SSU/covid19-project.git
 ```
-
 ```sh
 $ sudo docker-compose up
 ```
-
 ```sh
 $ pip3 install -r requirements.txt
 ```
+- Open http://localhost:5601  
+- Click `Management` tab  
+- Import [Kibana dashboard](https://github.com/COVID19-SSU/covid19-project/dashboard/export.ndjson)
 
 Open Data
 =======
