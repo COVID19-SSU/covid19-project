@@ -1,6 +1,6 @@
 ## Data Description
 
-- Save `covid19_infection_genage` data from `OPEN api` in `elastick search` and update daily
+- Save `covid19_infection_genage` data from `OPEN api` in `elasticsearch` and update daily
 
 ## Meaning of an item
 
