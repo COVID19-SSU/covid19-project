@@ -1,5 +1,5 @@
 ## Data Description
-Save `covid19_infection_status data from `OPEN api` in `elasticsearch` and update daily
+Save `covid19_infection_status data` from `OPEN api` in `elasticsearch` and update daily
 
 ## Meaning of an item
 |Item name|Item Description|Sample|
