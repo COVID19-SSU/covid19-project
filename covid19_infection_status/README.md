@@ -1,9 +1,7 @@
 ## Data Description
-
-- Save 'covid19_infection_status' data from 'OPEN api' in 'elastick search' and update daily
+Save `covid19_infection_status data from `OPEN api` in `elasticsearch` and update daily
 
 ## Meaning of an item
-
 |Item name|Item Description|Sample|
 |:----:|:----:|:----:|
 |SEQ|게시글번호(국내 시도별 발생현황 고유값)|74|
