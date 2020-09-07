@@ -21,12 +21,24 @@ Result
 
 Requirement
 =======
+```
+Python >= 3.0
+```
 
 Installation
 =======
 ```sh
 $ git clone https://github.com/COVID19-SSU/covid19-project.git
 ```
+
+```sh
+$ sudo docker-compose up
+```
+
+```sh
+$ pip3 install -r requirements.txt
+```
+
 Open Data
 =======
 * 공공 데이터 포털 (https://data.go.kr/)
