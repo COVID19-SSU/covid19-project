@@ -54,3 +54,5 @@ Run
         $ python covid19-project/covid19_infection_city/update_covid19_infection_city.py
         $ python covid19-project/covid19_infection_status/update_covid19_infection_status.py
     
+* Task scheduler(cron) (예정)
+  * 매일 정오(12:00PM)에 데이터 업데이트 프로그램 실행 예약
