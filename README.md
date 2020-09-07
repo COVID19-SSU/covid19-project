@@ -45,14 +45,17 @@ Run
   * 보건복지부 코로나19 데이터(3월1일~오늘)를 크롤링하여 elasticsearch에 추가
   
 
-         $ python covid19-project/covid19_infection_city/crawling_covid19_infection_city.py
-         $ python covid19-project/covid19_infection_status/crawling_covid19_infection_status.py
+         $ python3 covid19-project/covid19_infection_city/crawling_covid19_infection_city.py
+         $ python3 covid19-project/covid19_infection_status/crawling_covid19_infection_status.py
     
 * update
   * 기존 데이터에 보건복지부 코로나19 데이터(오늘)를 elasticsearch에 업데이트
   
-        $ python covid19-project/covid19_infection_city/update_covid19_infection_city.py
-        $ python covid19-project/covid19_infection_status/update_covid19_infection_status.py
+        $ python3 covid19-project/covid19_infection_city/update_covid19_infection_city.py
+        $ python3 covid19-project/covid19_infection_status/update_covid19_infection_status.py
     
-* Task scheduler(cron) (예정)
-  * 매일 정오(12:00PM)에 데이터 업데이트 프로그램 실행 예약
+* add Task scheduler(cron)
+  * 매일 12:00(PM)에 오늘 데이터 업데이트가 실행되도록 해당 작업 crontab에 등록 (작업 환경에 맞추어 절대 경로 수정 해줘야 함)
+  
+        $ echo -e "0 12 * * * python3 ~/covid19-project/covid19_infection_status/update_covid19_infection_status.py\n0 12 * * * python3 ~/covid19-project/covid19_infection_city/update_covid19_infection_city.py" | crontab
+
