@@ -18,6 +18,8 @@ Result
     * 날짜별 검사결과 그래프
     * 날짜별 확진자 증가 추이 그래프
 ![preview_](https://user-images.githubusercontent.com/55729930/92361544-7b21fe80-f129-11ea-87b4-f4b82b83468d.gif)
+    * 성별 연령별 확진자 비율 그래프
+![covid_board - Kibana](https://user-images.githubusercontent.com/55729930/92398418-7bd78680-f163-11ea-9cb8-6a72bf165737.png)
 
 Requirement
 =======
