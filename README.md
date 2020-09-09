@@ -42,17 +42,18 @@ $ pip3 install -r requirements.txt
 Run
 =======
 * crawling
-  * 보건복지부 코로나19 데이터(3월1일~오늘)를 크롤링하여 elasticsearch에 추가
+  * 보건복지부 코로나19 데이터(3월1일 ~ 오늘)를 크롤링하여 elasticsearch에 추가
     ```shell script
-    $ python3 covid19-project/covid19_infection_city/crawling_covid19_infection_city.py
-    $ python3 covid19-project/covid19_infection_status/crawling_covid19_infection_status.py
+    $ python3 run
     ```
     
 * update
-  * 기존 데이터에 보건복지부 코로나19 데이터(오늘)를 elasticsearch에 업데이트
+  * 기존 데이터에 보건복지부 코로나19 데이터(입력날짜)를 크롤링하여 elasticsearch에 업데이트
+  * 업데이트할 날짜 구간을 선택
     ```shell script
-    $ python3 covid19-project/covid19_infection_city/update_covid19_infection_city.py
-    $ python3 covid19-project/covid19_infection_status/update_covid19_infection_status.py
+    $ python3 run                       # 오늘의 데이터 크롤링
+    $ python3 run 20200606              # 2020년 6월 6일의 데이터 크롤링
+    $ python3 run 20200606 20200707     # 2020년 6월 6일 ~ 2020년 7월 7일의 데이터 크롤링
     ```
         
 * add Task scheduler(cron)
