@@ -1,0 +1,28 @@
+*.pyc
+*.o
+*.so
+*.swp
+*.png
+*.jpg
+*.bmp
+*.out*
+*.dat*
+*.log
+*.pot
+*.report
+__pycache__
+build
+static
+
+# virtualenv
+.python-version
+
+# Distribution / packaging
+MANIFEST
+*.idea
+
+# python Virtualenv
+venv/
+
+# MAC
+.DS_Store

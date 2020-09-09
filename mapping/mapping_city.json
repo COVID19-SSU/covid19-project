@@ -1,6 +1,5 @@
 {
   "mappings": {
-    "_doc": {
       "properties": {
         "createDt": {
           "type": "text"
@@ -12,13 +11,31 @@
           "type": "integer"
         },
         "gubun": {
-          "type": "text"
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
         },
         "gubunCn": {
-          "type": "text"
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
         },
         "gubunEn": {
-          "type": "text"
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
         },
         "incDec": {
           "type": "integer"
@@ -48,6 +65,5 @@
           "type": "text"
         }
       }
-    }
   }
 }
