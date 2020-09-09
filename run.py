@@ -1,12 +1,12 @@
-from py import func 
-from py import conf
-from py import crawl
+from src import func 
+from conf import constants
+from src import crawl
 import sys
 # 타입, 날짜
 # python3 run
 # python3 run -d 20200909
 # python3 run -d 
-# python3 run -csv ~ 
+## python3 run -csv ~ 
 
 if len(sys.argv)==1:
     crawl.crawl_city()
@@ -15,7 +15,7 @@ if len(sys.argv)==1:
     
 else:
     if len(sys.argv)==2 and sys.argv[1] == '-d':
-        start = end = conf.TODAY
+        start = end = constants.TODAY
         
     elif len(sys.argv)==3 and sys.argv[1] == '-d':
         start = end = sys.argv[2]
