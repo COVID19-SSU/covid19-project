@@ -3,12 +3,6 @@ from conf import api_config
 from conf import constants
 
 
-# 문자열 변경 함수 (str.replace의 반대버전)
-def rreplace(s, old, new, occurrence):
-    li = s.rsplit(old, occurrence)
-    return new.join(li)
-
-
 def crawl_city():
     url = api_config.COVID_CITY_URL + api_config.COVID_KEY_ALL
     json_txt = utils.xml_to_json(url)
@@ -22,7 +16,8 @@ def crawl_city():
         if len(doc['stdDay'].split('-')[1]) < 2:
             doc['stdDay'] = doc['stdDay'].replace(doc['stdDay'].split('-')[1], '0' + doc['stdDay'].split('-')[1], 1)
         if len(doc['stdDay'].split('-')[2]) < 2:
-            doc['stdDay'] = rreplace(doc['stdDay'], doc['stdDay'].split('-')[2], '0' + doc['stdDay'].split('-')[2], 1)
+            doc['stdDay'] = utils.rreplace(doc['stdDay'], doc['stdDay'].split('-')[2],
+                                           '0' + doc['stdDay'].split('-')[2], 1)
         doc = utils.change_region_name(doc)
         doc_list.append(doc)
     utils.put_es_all(constants.CITY, doc_list)
@@ -41,7 +36,8 @@ def crawl_city_date(start, end):
         if len(doc['stdDay'].split('-')[1]) < 2:
             doc['stdDay'] = doc['stdDay'].replace(doc['stdDay'].split('-')[1], '0' + doc['stdDay'].split('-')[1], 1)
         if len(doc['stdDay'].split('-')[2]) < 2:
-            doc['stdDay'] = rreplace(doc['stdDay'], doc['stdDay'].split('-')[2], '0' + doc['stdDay'].split('-')[2], 1)
+            doc['stdDay'] = utils.rreplace(doc['stdDay'], doc['stdDay'].split('-')[2],
+                                           '0' + doc['stdDay'].split('-')[2], 1)
         doc = utils.change_region_name(doc)
         doc_list.append(doc)
 
