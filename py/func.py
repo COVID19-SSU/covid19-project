@@ -5,7 +5,7 @@ import xmltodict
 from datetime import datetime
 from elasticsearch import Elasticsearch
 import os
-import conf
+from py import conf
 
 def xml_to_json(addr):
     req = requests.get(addr)

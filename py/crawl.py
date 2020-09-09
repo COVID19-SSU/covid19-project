@@ -1,5 +1,5 @@
-import func 
-import conf 
+from py import func 
+from py import conf 
 
 # 문자열 변경 함수 (str.replace의 반대버전)
 def rreplace(s, old, new, occurrence):

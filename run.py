@@ -1,6 +1,6 @@
-import func 
-import conf
-import crawl
+from py import func 
+from py import conf
+from py import crawl
 import sys
 # 타입, 날짜
 # python3 run
