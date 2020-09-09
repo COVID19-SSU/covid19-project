@@ -33,14 +33,15 @@ Installation
 $ git clone https://github.com/COVID19-SSU/covid19-project.git
 ```
 ```sh
-$ sudo docker-compose up
-```
-```sh
 $ pip3 install -r requirements.txt
 ```
 
 Run
 =======
+* Elastcisearch / Kibana run
+  ```sh
+  $ sudo docker-compose up
+  ```
 * crawling
   * 보건복지부 코로나19 데이터(3월1일~오늘)를 크롤링하여 elasticsearch에 추가
     ```shell script
