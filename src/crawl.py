@@ -86,7 +86,7 @@ def crawl_gen_age():
         doc_list.append(i)
     for doc in doc_list:
         doc['createDt'] = doc['createDt'][0:10]
-    utils.put_es_all(constants.GENAGE, doc_list)
+    utils.put_es_all(constants.GEN_AGE, doc_list)
 
 
 def crawl_gen_age_date(start, end):
@@ -97,4 +97,4 @@ def crawl_gen_age_date(start, end):
         doc_list.append(i)
     for doc in doc_list:
         doc['createDt'] = doc['createDt'][0:10]
-    utils.put_es(constants.GENAGE, doc_list)
+    utils.put_es(constants.GEN_AGE, doc_list)

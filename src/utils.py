@@ -80,7 +80,7 @@ def put_es_all(type, doc_list):
         index = "covid19_infected_people_by_city"
         with open("mapping/mapping_city.json", 'r') as f:
             mapping = json.load(f)
-    elif type == constants.GENAGE:
+    elif type == constants.GEN_AGE:
         index = "age_gender_of_infected_person"
         with open("mapping/mapping_gen_age.json", 'r') as f:
             mapping = json.load(f)
@@ -97,7 +97,7 @@ def put_es_all(type, doc_list):
 def put_es(type, doc_list):
     if type == constants.CITY:
         index = "covid19_infected_people_by_city"
-    elif type == constants.GENAGE:
+    elif type == constants.GEN_AGE:
         index = "age_gender_of_infected_person"
     elif type == constants.STATUS:
         index = "status_of_infected_person"
