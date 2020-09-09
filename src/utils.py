@@ -1,17 +1,14 @@
-from bs4 import BeautifulSoup
 import requests
 import json
 import xmltodict
-from datetime import datetime
 from elasticsearch import Elasticsearch
-import os
 from conf import constants
 
 
 def change_region_name(doc):
     if doc['gubunEn'] == 'Busan':
-            doc['gubunEn'] = 'Busan'
-            doc['gubun'] = '부산광역시'
+        doc['gubunEn'] = 'Busan'
+        doc['gubun'] = '부산광역시'
     elif doc['gubunEn'] == 'Chungcheongbuk-do':
         doc['gubunEn'] = 'North Chungcheong Province'
         doc['gubun'] = '충청북도'
@@ -60,7 +57,7 @@ def change_region_name(doc):
     elif doc['gubunEn'] == 'Ulsan':
         doc['gubunEn'] = 'Ulsan'
         doc['gubun'] = '울산광역시'
-    
+
     return doc
 
 
@@ -78,15 +75,14 @@ def rreplace(s, old, new, occurrence):
     return new.join(li)
 
 
-
-def put_es_all(type,doc_list):
+def put_es_all(type, doc_list):
     if type == constants.CITY:
         index = "covid19_infected_people_by_city"
         with open("mapping/mapping_city.json", 'r') as f:
             mapping = json.load(f)
-    elif type == constants.GENAGE:
+    elif type == constants.GEN_AGE:
         index = "age_gender_of_infected_person"
-        with open("mapping/mapping_gen&age.json", 'r') as f:
+        with open("mapping/mapping_gen_age.json", 'r') as f:
             mapping = json.load(f)
     elif type == constants.STATUS:
         index = "status_of_infected_person"
@@ -97,18 +93,15 @@ def put_es_all(type,doc_list):
     for i in doc_list:
         es.index(index=index, doc_type="_doc", body=i)
 
-def put_es(type,doc_list):
+
+def put_es(type, doc_list):
     if type == constants.CITY:
         index = "covid19_infected_people_by_city"
-    elif type == constants.GENAGE:
-        index = "age_gender_of_infected_person"        
+    elif type == constants.GEN_AGE:
+        index = "age_gender_of_infected_person"
     elif type == constants.STATUS:
-        index = "status_of_infected_person" 
+        index = "status_of_infected_person"
     es = Elasticsearch('localhost:9200')
 
     for i in doc_list:
         es.index(index=index, doc_type="_doc", body=i)
-
-
-
-

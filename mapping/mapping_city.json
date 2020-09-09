@@ -1,69 +1,69 @@
 {
   "mappings": {
-      "properties": {
-        "createDt": {
-          "type": "text"
-        },
-        "deathCnt": {
-          "type": "integer"
-        },
-        "defCnt": {
-          "type": "integer"
-        },
-        "gubun": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword",
-              "ignore_above": 256
-            }
+    "properties": {
+      "createDt": {
+        "type": "text"
+      },
+      "deathCnt": {
+        "type": "integer"
+      },
+      "defCnt": {
+        "type": "integer"
+      },
+      "gubun": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
           }
-        },
-        "gubunCn": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword",
-              "ignore_above": 256
-            }
-          }
-        },
-        "gubunEn": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword",
-              "ignore_above": 256
-            }
-          }
-        },
-        "incDec": {
-          "type": "integer"
-        },
-        "isolClearCnt": {
-          "type": "integer"
-        },
-        "isolIngCnt": {
-          "type": "integer"
-        },
-        "localOccCnt": {
-          "type": "integer"
-        },
-        "overFlowCnt": {
-          "type": "integer"
-        },
-        "qurRate": {
-          "type": "text"
-        },
-        "seq": {
-          "type": "integer"
-        },
-        "stdDay": {
-          "type": "date"
-        },
-        "updateDt": {
-          "type": "text"
         }
+      },
+      "gubunCn": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "gubunEn": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "incDec": {
+        "type": "integer"
+      },
+      "isolClearCnt": {
+        "type": "integer"
+      },
+      "isolIngCnt": {
+        "type": "integer"
+      },
+      "localOccCnt": {
+        "type": "integer"
+      },
+      "overFlowCnt": {
+        "type": "integer"
+      },
+      "qurRate": {
+        "type": "text"
+      },
+      "seq": {
+        "type": "integer"
+      },
+      "stdDay": {
+        "type": "date"
+      },
+      "updateDt": {
+        "type": "text"
       }
+    }
   }
 }
