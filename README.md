@@ -42,24 +42,23 @@ $ pip3 install -r requirements.txt
 Run
 =======
 * crawling
-  * 보건복지부 코로나19 데이터(3월1일 ~ 오늘)를 크롤링하여 elasticsearch에 추가
+  * 보건복지부 코로나19 데이터(3월1일~오늘)를 크롤링하여 elasticsearch에 추가
     ```shell script
-    $ python3 run
+    $ python3 covid19-project/covid19_infection_city/crawling_covid19_infection_city.py
+    $ python3 covid19-project/covid19_infection_status/crawling_covid19_infection_status.py
     ```
     
 * update
-  * 기존 데이터에 보건복지부 코로나19 데이터 중 입력된 날짜 구간만큼 크롤링하여 elasticsearch에 업데이트
-  * '-d'옵션과 업데이트할 날짜 구간을 입력
+  * 기존 데이터에 보건복지부 코로나19 데이터(오늘)를 elasticsearch에 업데이트
     ```shell script
-    $ python3 run -d                       # 오늘의 데이터 크롤링
-    $ python3 run -d 20200606              # 2020년 6월 6일의 데이터 크롤링
-    $ python3 run -d 20200606 20200707     # 2020년 6월 6일 ~ 2020년 7월 7일의 데이터 크롤링
+    $ python3 covid19-project/covid19_infection_city/update_covid19_infection_city.py
+    $ python3 covid19-project/covid19_infection_status/update_covid19_infection_status.py
     ```
         
 * add Task scheduler(cron)
   * 매일 12:00(PM)에 오늘 데이터 업데이트가 실행되도록 해당 작업 crontab에 등록 (작업 환경에 맞추어 절대 경로 수정 해줘야 함)  
     ```shell script
-    $ echo -e "0 12 * * * python3 ~/covid19-project/run -d\n" | crontab
+    $ echo -e "0 12 * * * python3 ~/covid19-project/covid19_infection_status/update_covid19_infection_status.py\n0 12 * * * python3 ~/covid19-project/covid19_infection_city/update_covid19_infection_city.py" | crontab
     ```
 
 * Dashboard
