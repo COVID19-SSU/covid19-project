@@ -24,7 +24,6 @@ if __name__ == "__main__":
         elif len(sys.argv) == 4 and sys.argv[1] == '-d':
             start = sys.argv[2]
             end = sys.argv[3]
-
         crawl.crawl_city_date(start, end)
         crawl.crawl_gen_age_date(start, end)
         crawl.crawl_status_date(start, end)

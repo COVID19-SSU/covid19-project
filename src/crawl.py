@@ -26,6 +26,7 @@ def crawl_city():
 def crawl_city_date(start, end):
     url = api_config.COVID_CITY_URL + api_config.COVID_KEY_START + start + api_config.COVID_KEY_END + end + '&'
     json_txt = utils.xml_to_json(url)
+    print(json_txt)
     doc_list = []
     for j in json_txt['response']['body']['items']['item']:
         doc = {}
