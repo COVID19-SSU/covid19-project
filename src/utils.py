@@ -2,7 +2,7 @@ import requests
 import json
 import xmltodict
 from elasticsearch import Elasticsearch
-from conf import constants
+from src.common import constants
 
 
 def change_region_name(doc):
