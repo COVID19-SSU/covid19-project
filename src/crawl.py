@@ -1,6 +1,6 @@
 from src import utils
 from conf import api_config
-from conf import constants
+from src.common import constants
 
 
 def crawl_city():

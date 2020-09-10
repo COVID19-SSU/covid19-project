@@ -1,4 +1,4 @@
-from conf import constants
+from src.common import constants
 from src import crawl
 import sys
 

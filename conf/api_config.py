@@ -1,4 +1,4 @@
-from conf import constants
+from src.common import constants
 
 COVID_KEY_START = '?serviceKey=MMq1VsRlz5qKvsdKDrvMavJB5rGdJOA8JGKgyojceXcL5tj6MJtzG21jN30ke9OOHZI%2FsQEwftRprl%2FQjcE2bg%3D%3D&pageNo=1&numOfRows=10&startCreateDt='
 COVID_KEY_END = '&endCreateDt='
