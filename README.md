@@ -46,7 +46,7 @@ Save `status_of_infected_person`, `infected_people_by_city`, `age_gender_of_infe
 * crawling
   * 보건복지부 코로나19 데이터(3월1일~오늘)를 크롤링하여 elasticsearch에 추가
     ```shell script
-    $ python3 run. py
+    $ python3 run.py
     ```
     
 * update
