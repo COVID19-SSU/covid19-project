@@ -20,7 +20,7 @@ def crawl_city():
                                            '0' + doc['stdDay'].split('-')[2], 1)
         doc = utils.change_region_name(doc)
         doc_list.append(doc)
-    utils.put_es_all(constants.CITY, doc_list)
+    utils.put_es_all(constants.Type.CITY, doc_list)
 
 
 def crawl_city_date(start, end):
@@ -42,7 +42,7 @@ def crawl_city_date(start, end):
         doc = utils.change_region_name(doc)
         doc_list.append(doc)
 
-    utils.put_es(constants.CITY, doc_list)
+    utils.put_es(constants.Type.CITY, doc_list)
 
 
 def crawl_status():
@@ -55,7 +55,7 @@ def crawl_status():
             doc[i] = j[i]
         doc['createDt'] = doc['createDt'][0:10]
         doc_list.append(doc)
-    utils.put_es_all(constants.STATUS, doc_list)
+    utils.put_es_all(constants.Type.STATUS, doc_list)
 
 
 def crawl_status_date(start, end):
@@ -76,7 +76,7 @@ def crawl_status_date(start, end):
             doc['createDt'] = doc['createDt'][0:10]
             doc_list.append(doc)
 
-    utils.put_es(constants.STATUS, doc_list)
+    utils.put_es(constants.Type.STATUS, doc_list)
 
 
 def crawl_gen_age():
@@ -87,7 +87,7 @@ def crawl_gen_age():
         doc_list.append(i)
     for doc in doc_list:
         doc['createDt'] = doc['createDt'][0:10]
-    utils.put_es_all(constants.GEN_AGE, doc_list)
+    utils.put_es_all(constants.Type.GEN_AGE, doc_list)
 
 
 def crawl_gen_age_date(start, end):
@@ -98,4 +98,4 @@ def crawl_gen_age_date(start, end):
         doc_list.append(i)
     for doc in doc_list:
         doc['createDt'] = doc['createDt'][0:10]
-    utils.put_es(constants.GEN_AGE, doc_list)
+    utils.put_es(constants.Type.GEN_AGE, doc_list)
