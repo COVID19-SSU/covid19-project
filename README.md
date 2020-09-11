@@ -4,7 +4,7 @@ Visualize and Analyze data for COVID-19.
 Table of contents
 =================
 <!--ts-->
-   * [Result](#Result)
+   * [Output](#Output)
    * [Requirement](#Requirement)
    * [Installation](#Installation)
    * [Run](#run)
@@ -12,15 +12,18 @@ Table of contents
    * [Schema Explanation](#Schema-Explanation)
 <!--te-->
 
-Result
+Output
 =======
-* 코로나 실시간 현황판
-    * 당일 지역별 확진자, 사망자, 격리해제 인원
-    * 날짜별 검사결과 그래프
-    * 날짜별 확진자 증가 추이 그래프
-![preview_](https://user-images.githubusercontent.com/55729930/92361544-7b21fe80-f129-11ea-87b4-f4b82b83468d.gif)
-    * 성별 연령별 확진자 비율 그래프
-![covid_board - Kibana](https://user-images.githubusercontent.com/55729930/92398418-7bd78680-f163-11ea-9cb8-6a72bf165737.png)
+- 코로나 실시간 현황판
+  - 누적 확진자
+  - 지역별 확진자 현황
+  - 지역별 누적 추이
+  - 성별 확진자 비율
+  - 연령별 확진자 현황
+  - 검사 결과 현황
+<img width="2499" alt="dashboard1" src="https://user-images.githubusercontent.com/38535571/92904534-e9cec700-f45d-11ea-9401-31615422dfdc.png">
+<img width="2499" alt="dashboard2" src="https://user-images.githubusercontent.com/38535571/92904659-010db480-f45e-11ea-8c32-288e5393f459.png">
+
 
 Requirement
 =======
