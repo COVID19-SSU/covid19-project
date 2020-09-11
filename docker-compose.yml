@@ -1,4 +1,4 @@
-version: '3'
+version: '3.2'
 services:
   kibana:
     image: kibana:7.6.1
@@ -9,9 +9,11 @@ services:
   elasticsearch:
     image: elasticsearch:7.6.1
     environment:
-      - cluster.name=es-cluster
-      - node.name=es-node
-      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+      - cluster.name=elasticsearch
+      - node.name=es
+      - "ES_JAVA_OPTS=-Xms8g -Xmx8g"
       - discovery.type=single-node
+    volumes:
+      - ./elasticsearch/data:/elasticsearch/data
     ports:
       - 9200:9200
